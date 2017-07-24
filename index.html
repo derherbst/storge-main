@@ -10,6 +10,10 @@
   <link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+<!--
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+-->
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/scroll.js"></script>
 </head>
@@ -48,22 +52,22 @@
     <div class="photos">
       <div class="photos__inner slider">
         <div class="slider__item">
-          <img class="slider__image" src="img/1.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" data-lazy="img/1.jpg" alt="Storge" width="100%" height="auto">
         </div>
         <div class="slider__item">
-          <img class="slider__image" src="img/2.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" data-lazy="img/2.jpg" alt="Storge" width="100%" height="auto">
         </div>
         <div class="slider__item">
-          <img class="slider__image" src="img/3.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" data-lazy="img/3.jpg" alt="Storge" width="100%" height="auto">
         </div>
         <div class="slider__item">
-          <img class="slider__image" src="img/4.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" data-lazy="img/4.jpg" alt="Storge" width="100%" height="auto">
         </div>
         <div class="slider__item">
-          <img class="slider__image" src="img/5.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" data-lazy="img/5.jpg" alt="Storge" width="100%" height="auto">
         </div>
         <div class="slider__item">
-          <img class="slider__image" src="img/6.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" data-lazy="img/6.jpg" alt="Storge" width="100%" height="auto">
         </div>
       </div>
     </div>
@@ -90,5 +94,8 @@
     </div>
     <nav class="down"></nav>
   </section>
+<!--  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <script type="text/javascript" src="js/init-slick.js"></script>
 </body>
 </html>
