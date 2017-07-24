@@ -1,1 +1,16 @@
+@import "normalize.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "global/layout.scss";
 
+@import "blocks/body-wrapper.scss";
+@import "blocks/section.scss";
+@import "blocks/top.scss";
+@import "blocks/down.scss";
+@import "blocks/page-header.scss";
+@import "blocks/main-nav.scss";
+@import "blocks/trailer.scss";
+@import "blocks/photos.scss";
+@import "blocks/slider.scss";
+@import "blocks/cast.scss";
+@import "blocks/posters.scss";

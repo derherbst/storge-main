@@ -1,18 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans');
+
 html {
-  font-size: 15px;
-  line-height: 1.2;
+  font-size: 16px;
+//  line-height: 1.25rem;
   font-weight: 400;
 }
 
 body {
-  position: relative;
   margin: 0px;
   padding: 0px;
-  min-width: $mobile-width;
+  min-width: 320px;
   margin: 0 auto;
-  font-family: "Open Sans", "Arial", sans-serif;
-  background-color: $white;
-  color: $grey;
+  font-family: "Nunito Sans", "Arial", sans-serif;
+  background-color: $black;
+  color: $greenGrey;
 }
 
 h1,
@@ -58,4 +59,11 @@ a {
 
 img {
   height: auto;
+}
+
+nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  cursor: pointer;
 }

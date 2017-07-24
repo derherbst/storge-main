@@ -1,0 +1,8 @@
+.top {
+  top: 30px;
+  &::before {
+    content: "\f176";
+    font-family: FontAwesome;
+    font-size: 30px;
+  }
+}

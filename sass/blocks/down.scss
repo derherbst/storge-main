@@ -1,0 +1,8 @@
+.down {
+  bottom: 30px;
+  &::before {
+    content: "\f175";
+    font-family: FontAwesome;
+    font-size: 30px;
+  }
+}
