@@ -1,3 +1,12 @@
 .page-header {
   @include on-center();
 }
+
+.page-header__intro {
+  padding-top: 93px;
+}
+
+.page-header__title {
+  @include font(78px, 1.077em, 400);
+  letter-spacing: 30px;
+}
