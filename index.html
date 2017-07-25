@@ -10,15 +10,13 @@
   <link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-<!--
   <link rel="stylesheet" type="text/css" href="css/slick.css"/>
   <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
--->
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/scroll.js"></script>
 </head>
 <body class="body-wrapper">
-  <section class="section section--home">
+  <section id="home" class="section section--home">
     <header class="page-header">
       <div class="page-header__inner">
         <div class="page-header__intro">
@@ -27,53 +25,63 @@
         </div>
         <nav class="main-nav">
           <ul class="main-nav__list">
-            <li class="main-nav__item">home</li>
-            <li class="main-nav__item">trailer</li>
-            <li class="main-nav__item">photos</li>
-            <li class="main-nav__item">cast&amp;crew</li>
-            <li class="main-nav__item">posters</li>
+            <li class="main-nav__item">
+              <a class="active main-nav__link" href="#home">home</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#trailer">trailer</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#photos">photos</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#cast">cast&amp;crew</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#posters">posters</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
     <nav class="down"></nav>
   </section>
-  <section class="section section--trailer">
+  <section id="trailer" class="section section--trailer">
     <nav class="top"></nav>
     <div class="trailer">
       <div class="trailer__inner">
-        <iframe src="https://player.vimeo.com/video/220052464?color=6e8783&title=0&byline=0&portrait=0" width="1100" height="579" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/220052464?color=efd5e5&title=0&byline=0&portrait=0" width="1100" height="579" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div>
     <nav class="down"></nav>
   </section>
-  <section class="section section--photos">
+  <section id="photos" class="section section--photos">
     <nav class="top"></nav>
     <div class="photos">
       <div class="photos__inner slider">
         <div class="slider__item">
-          <img class="slider__image" data-lazy="img/1.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" src="img/1.jpg" alt="Storge" width="100%" height="auto">
         </div>
         <div class="slider__item">
-          <img class="slider__image" data-lazy="img/2.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" src="img/2.jpg" alt="Storge" width="100%" height="auto">
         </div>
         <div class="slider__item">
-          <img class="slider__image" data-lazy="img/3.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" src="img/3.jpg" alt="Storge" width="100%" height="auto">
         </div>
         <div class="slider__item">
-          <img class="slider__image" data-lazy="img/4.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" src="img/4.jpg" alt="Storge" width="100%" height="auto">
         </div>
         <div class="slider__item">
-          <img class="slider__image" data-lazy="img/5.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" src="img/5.jpg" alt="Storge" width="100%" height="auto">
         </div>
         <div class="slider__item">
-          <img class="slider__image" data-lazy="img/6.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" src="/img/6.jpg" alt="Storge" width="100%" height="auto">
         </div>
       </div>
     </div>
     <nav class="down"></nav>
   </section>
-  <section class="section section--cast">
+  <section id="cast" class="section section--cast">
     <nav class="top"></nav>
     <div class="cast">
       <div class="cast__inner">
@@ -85,7 +93,7 @@
     </div>
     <nav class="down"></nav>
   </section>
-  <section class="section section--posters">
+  <section id="posters" class="section section--posters">
     <nav class="top"></nav>
     <div class="posters">
       <div class="posters__inner">
@@ -94,8 +102,64 @@
     </div>
     <nav class="down"></nav>
   </section>
-<!--  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>-->
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script type="text/javascript" src="js/init-slick.js"></script>
+  <script>
+    var menu_selector = ".main-nav"; // Переменная должна содержать название класса или идентификатора, обертки нашего меню.
+ 
+    function onScroll(){
+        var scroll_top = $(document).scrollTop();
+        $(menu_selector + " a").each(function(){
+            var hash = $(this).attr("href");
+            var target = $(hash);
+            if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
+                $(menu_selector + " a.active").removeClass("active");
+                $(this).addClass("active");
+            } else {
+                $(this).removeClass("active");
+            }
+        });
+    }
+ 
+    $(document).ready(function () {
+
+        $(document).on("scroll", onScroll);
+
+        $("a[href^=#]").click(function(e){
+            e.preventDefault();
+
+            $(document).off("scroll");
+            $(menu_selector + " a.active").removeClass("active");
+            $(this).addClass("active");
+            var hash = $(this).attr("href");
+            var target = $(hash);
+
+            $("html, body").animate({
+                scrollTop: target.offset().top
+            }, 500, function(){
+                window.location.hash = hash;
+                $(document).on("scroll", onScroll);
+            });
+
+        });
+
+    });
+  </script>
+  <script>
+    $(function(){
+        // Check the initial Poistion of the Sticky Header
+        var stickyHeaderTop = $('.main-nav').offset().top;
+ 
+        $(window).scroll(function(){
+                if( $(window).scrollTop() > stickyHeaderTop ) {
+                        $('.main-nav').css({position: 'fixed', top: '0px'});
+                        $('#stickyalias').css('display', 'block');
+                } else {
+                        $('.main-nav').css({position: 'static', top: '0px'});
+                        $('#stickyalias').css('display', 'none');
+                }
+        });
+  });
+  </script>
 </body>
 </html>

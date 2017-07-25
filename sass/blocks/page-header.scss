@@ -2,8 +2,13 @@
   @include on-center();
 }
 
+.page-header__inner {
+  text-align: center;
+}
+
 .page-header__intro {
   padding-top: 93px;
+  margin-bottom: 30px;
 }
 
 .page-header__title {

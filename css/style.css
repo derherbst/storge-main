@@ -605,7 +605,7 @@ body {
   margin: 0 auto;
   font-family: "Nunito Sans", "Arial", sans-serif;
   background-color: #000;
-  color: #6e8783; }
+  color: #efd5e5; }
 
 h1,
 h2,
@@ -649,6 +649,9 @@ nav {
   left: 0;
   right: 0;
   cursor: pointer; }
+  nav.top, nav.down {
+    -webkit-transform: translateX(50%);
+            transform: translateX(50%); }
 
 .section {
   height: 100vh;
@@ -656,6 +659,10 @@ nav {
   .section--home {
     background: url("/img/storge-bg.jpg") center center no-repeat #000;
     background-size: cover; }
+  .section--trailer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
 
 .top {
   top: 30px; }
@@ -672,5 +679,82 @@ nav {
     font-size: 30px; }
 
 .page-header {
+  width: 1200px;
+  margin: 0 auto; }
+
+.page-header__inner {
+  text-align: center; }
+
+.page-header__intro {
+  padding-top: 93px;
+  margin-bottom: 30px; }
+
+.page-header__title {
+  font-size: 78px;
+  line-height: 1.077em;
+  font-weight: 400;
+  letter-spacing: 30px; }
+
+.main-nav {
+  padding: 0 20% 0;
+  padding-top: 30px;
+  z-index: 1000; }
+
+.main-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.main-nav__link {
+  font-size: 18px;
+  line-height: 1.2em;
+  font-weight: 400;
+  display: block;
+  text-decoration: none;
+  color: inherit; }
+  .main-nav__link:hover, .main-nav__link.active {
+    color: #fff; }
+
+.trailer {
+  width: 1200px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.trailer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.photos {
   width: 1200px;
   margin: 0 auto; }

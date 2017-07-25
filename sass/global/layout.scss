@@ -13,7 +13,7 @@ body {
   margin: 0 auto;
   font-family: "Nunito Sans", "Arial", sans-serif;
   background-color: $black;
-  color: $greenGrey;
+  color: $lightPink;
 }
 
 h1,
@@ -66,4 +66,8 @@ nav {
   left: 0;
   right: 0;
   cursor: pointer;
+  &.top,
+  &.down {
+    transform: translateX(50%);
+  }
 }
