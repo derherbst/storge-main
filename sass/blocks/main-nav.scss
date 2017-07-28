@@ -23,5 +23,6 @@
   &:hover,
   &.active {
     color: $white;
+    border-bottom: $lightPink-border;
   }
 }

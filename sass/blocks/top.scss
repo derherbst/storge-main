@@ -1,8 +1,14 @@
 .top {
+  position: absolute;
+  left: 0;
+  right: 0;
   top: 30px;
   &::before {
     content: "\f176";
     font-family: FontAwesome;
     font-size: 30px;
+    margin: 0 auto;
+    display: block;
+    width: 20px;
   }
 }

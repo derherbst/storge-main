@@ -2,10 +2,11 @@
   height: 100vh;
   position: relative;
   &--home {
-    background: url('/img/storge-bg.jpg') center center no-repeat #000;
+    background: url('../img/storge-bg.jpg') center center no-repeat #000;
     background-size: cover;
   }
-  &--trailer {
+  &--trailer,
+  &--photos {
     display: flex;
   }
 }
