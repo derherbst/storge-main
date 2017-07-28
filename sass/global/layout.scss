@@ -66,8 +66,4 @@ nav {
   left: 0;
   right: 0;
   cursor: pointer;
-  &.top,
-  &.down {
-    transform: translateX(50%);
-  }
 }
