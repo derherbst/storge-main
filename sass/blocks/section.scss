@@ -10,4 +10,8 @@
   &--photos {
     display: flex;
   }
+  &--cast {
+    background: url('../img/cast-bg.jpg') center center no-repeat #000;
+    background-size: cover;
+  }
 }
