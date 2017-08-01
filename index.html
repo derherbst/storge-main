@@ -3,17 +3,12 @@
 <head>
   <meta charset="utf-8">
   <title>STORGE</title>
-<!--  <link rel="stylesheet" type="text/css" href="css/normalize.css">-->
-<!--    <link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica" rel="stylesheet">-->
-<!--    <link href="https://fonts.googleapis.com/css?family=Share" rel="stylesheet">-->
-<!--    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">-->
-  <link href="https://fonts.googleapis.com/css?family=Athiti" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/slick.css"/>
   <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="js/scroll.js"></script>
+  <script src="js/ScrollMagic.js"></script>
 </head>
 <body class="body-wrapper">
   <section id="home" class="section section--home">
@@ -37,33 +32,31 @@
             <li class="main-nav__item">
               <a class="main-nav__link" href="#cast">cast&amp;crew</a>
             </li>
+<!--
             <li class="main-nav__item">
               <a class="main-nav__link" href="#posters">posters</a>
             </li>
+-->
           </ul>
         </nav>
       </div>
     </header>
-    <nav class="down"></nav>
   </section>
   <section id="trailer" class="section section--trailer">
-    <nav class="top"></nav>
     <div class="trailer">
       <div class="trailer__inner">
         <iframe src="https://player.vimeo.com/video/220052464?color=efd5e5&title=0&byline=0&portrait=0" width="1100" height="579" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div>
-    <nav class="down"></nav>
   </section>
   <section id="photos" class="section section--photos">
-    <nav class="top"></nav>
     <div class="photos">
       <div class="photos__inner slider">
         <div class="slider__item">
-          <img class="slider__image" src="img/1.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" src="img/2.jpg" alt="Storge" width="100%" height="auto">
         </div>
         <div class="slider__item">
-          <img class="slider__image" src="img/2.jpg" alt="Storge" width="100%" height="auto">
+          <img class="slider__image" src="img/1.jpg" alt="Storge" width="100%" height="auto">
         </div>
         <div class="slider__item">
           <img class="slider__image" src="img/3.jpg" alt="Storge" width="100%" height="auto">
@@ -79,10 +72,8 @@
         </div>
       </div>
     </div>
-    <nav class="down"></nav>
   </section>
   <section id="cast" class="section section--cast">
-    <nav class="top"></nav>
     <div class="cast">
       <div class="cast__inner">
         <div class="cast__block cast__block--actors">
@@ -111,7 +102,7 @@
           <p class="cast__role">Production Designer</p>
           <p class="cast__name">Darya Litvinova</p>
           <p class="cast__role">Costumes</p>
-          <p class="cast__name">Polina Juravkova</p>
+          <p class="cast__name">Polina Zhuravkova</p>
           <p class="cast__role">Sound Recordist/Sound Editor</p>
           <p class="cast__name">Konstantin Andzhanovskiy</p>
           <p class="cast__role">Editor</p>
@@ -124,8 +115,8 @@
         </div>
       </div>
     </div>
-    <nav class="down"></nav>
   </section>
+<!--
   <section id="posters" class="section section--posters">
     <nav class="top"></nav>
     <div class="posters">
@@ -135,6 +126,7 @@
     </div>
     <nav class="down"></nav>
   </section>
+-->
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script type="text/javascript" src="js/init-slick.js"></script>
   <script>
@@ -179,20 +171,45 @@
     });
   </script>
   <script>
+      $(function () { // wait for document ready
+          // init
+          var controller = new ScrollMagic.Controller({
+              globalSceneOptions: {
+                  triggerHook: 'onLeave'
+              }
+          });
+
+          // get all slides
+          var slides = document.querySelectorAll("section.section");
+
+          // create scene for every slide
+          for (var i=0; i<slides.length; i++) {
+              new ScrollMagic.Scene({
+                      triggerElement: slides[i]
+                  })
+                  .setPin(slides[i])
+                  .addIndicators() // add indicators (requires plugin)
+                  .addTo(controller);
+          }
+      });
+  </script>
+<!--
+  <script>
     $(function(){
         // Check the initial Poistion of the Sticky Header
         var stickyHeaderTop = $('.main-nav').offset().top;
  
         $(window).scroll(function(){
                 if( $(window).scrollTop() > stickyHeaderTop ) {
-                        $('.main-nav').css({position: 'fixed', top: '0px', width: '720', left: '11.1%'});
+                        $('.main-nav').css({position: 'fixed', top: '0px', width: '720'});
                         $('#stickyalias').css('display', 'block');
                 } else {
-                        $('.main-nav').css({position: 'static', top: '0px', width: '720', left: '11.1%'});
+                        $('.main-nav').css({position: 'static', top: '0px', width: '720'});
                         $('#stickyalias').css('display', 'none');
                 }
         });
   });
   </script>
+-->
 </body>
 </html>

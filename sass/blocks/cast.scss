@@ -1,8 +1,58 @@
+.cast {
+  display: grid;
+    grid-template-columns: 1fr;
+    height: inherit;
+    align-content: center;
+}
+
+.cast__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    ". one four ."
+    ". two five ."
+    ". three six .";
+}
+
+.cast__block {
+  justify-self: center;
+  text-align: center;
+  align-self: center;
+}
+
 .cast__role {
   font-weight: 700;
   font-size: 16px;
+  margin-bottom: 0.2em;
+  text-transform: none;
 }
 
 .cast__name {
   color: $white;
+  margin-bottom: 1em
+}
+
+.cast__block--actors {
+  grid-area: one;
+}
+
+.cast__block--director {
+  grid-area: two;
+}
+
+.cast__block--assistant {
+  grid-area: three;
+}
+
+.cast__block--photo {
+  grid-area: four;
+}
+
+.cast__block--production {
+  grid-area: five;
+}
+
+.cast__block--produced {
+  grid-area: six;
 }
