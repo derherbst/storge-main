@@ -5,32 +5,34 @@
   <title>STORGE</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css"/>
   <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
   <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery.pagepiling.min.js"></script>
   <script src="js/scroll.js"></script>
-  <script src="js/ScrollMagic.js"></script>
+<!--  <script src="js/ScrollMagic.js"></script>-->
 </head>
-<body class="body-wrapper">
+<body id="pagepiling" class="body-wrapper">
   <section id="home" class="section section--home">
     <header class="page-header">
       <div class="page-header__inner">
         <div class="page-header__intro">
           <h1 class="page-header__title">STORGE</h1>
-          <p class="page-header__caption">28 min &#9679; drama</p>
+          <p class="page-header__caption">29 min &#9679; drama</p>
         </div>
         <nav class="main-nav">
-          <ul class="main-nav__list">
-            <li class="main-nav__item">
-              <a class="active main-nav__link" href="#home">home</a>
+          <ul id="menu" class="main-nav__list">
+            <li data-menuanchor="page1" class="main-nav__item">
+              <a class="active main-nav__link" href="#page1">home</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#trailer">trailer</a>
+            <li data-menuanchor="page2" class="main-nav__item">
+              <a class="main-nav__link" href="#page2">trailer</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#photos">photos</a>
+            <li data-menuanchor="page3" class="main-nav__item">
+              <a class="main-nav__link" href="#page3">photos</a>
             </li>
-            <li class="main-nav__item">
-              <a class="main-nav__link" href="#cast">cast&amp;crew</a>
+            <li data-menuanchor="page4" class="main-nav__item">
+              <a class="main-nav__link" href="#page4">cast&amp;crew</a>
             </li>
 <!--
             <li class="main-nav__item">
@@ -77,9 +79,9 @@
     <div class="cast">
       <div class="cast__inner">
         <div class="cast__block cast__block--actors">
-          <p class="cast__role">Alyona</p>
+<!--          <p class="cast__role">Alyona</p>-->
           <p class="cast__name">Alyona Alyonkina</p>
-          <p class="cast__role">Mother</p>
+<!--          <p class="cast__role">Mother</p>-->
           <p class="cast__name">Galya Lebedinets</p>
         </div>
         <div class="cast__block cast__block--director">
@@ -87,26 +89,42 @@
           <p class="cast__name">Ekaterina Selenkina</p>
         </div>
         <div class="cast__block cast__block--assistant">
-          <p class="cast__role">Assistant Director</p>
-          <p class="cast__name">Anna Proshutinskaya</p>
-          <p class="cast__role">2nd Assistant Director</p>
-          <p class="cast__name">Aysel Latifova</p>
+          <div class="cast__wrapper">
+            <p class="cast__role">Assistant Director</p>
+            <p class="cast__name">Anna Proshutinskaya</p>
+          </div>
+          <div class="cast__wrapper">
+            <p class="cast__role">2nd Assistant Director</p>
+            <p class="cast__name">Aysel Latifova</p>
+          </div>
         </div>
         <div class="cast__block cast__block--photo">
-          <p class="cast__role">Director of Photography</p>
-          <p class="cast__name">Alexey Kurbatov</p>
-          <p class="cast__role">1st Assistant Camera</p>
-          <p class="cast__name">Yakov Mironchev</p>
+          <div class="cast__wrapper">
+            <p class="cast__role">Director of Photography</p>
+            <p class="cast__name">Alexey Kurbatov</p>
+          </div>
+          <div class="cast__wrapper">
+            <p class="cast__role">1st Assistant Camera</p>
+            <p class="cast__name">Yakov Mironchev</p>
+          </div>
         </div>
         <div class="cast__block cast__block--production">
+          <div class="cast__wrapper">
           <p class="cast__role">Production Designer</p>
           <p class="cast__name">Darya Litvinova</p>
-          <p class="cast__role">Costumes</p>
-          <p class="cast__name">Polina Zhuravkova</p>
-          <p class="cast__role">Sound Recordist/Sound Editor</p>
-          <p class="cast__name">Konstantin Andzhanovskiy</p>
-          <p class="cast__role">Editor</p>
-          <p class="cast__name">Alexander Pavlov</p>
+          </div>
+          <div class="cast__wrapper">
+            <p class="cast__role">Costumes</p>
+            <p class="cast__name">Polina Zhuravkova</p>
+          </div>
+          <div class="cast__wrapper">
+            <p class="cast__role">Sound Recordist/Sound Editor</p>
+            <p class="cast__name">Konstantin Andzhanovskiy</p>
+          </div>
+          <div class="cast__wrapper">
+            <p class="cast__role">Editor</p>
+            <p class="cast__name">Alexander Pavlov</p>
+          </div>
         </div>
         <div class="cast__block cast__block--produced">
           <p class="cast__role">Produced by</p>
@@ -118,13 +136,11 @@
   </section>
 <!--
   <section id="posters" class="section section--posters">
-    <nav class="top"></nav>
     <div class="posters">
       <div class="posters__inner">
         
       </div>
     </div>
-    <nav class="down"></nav>
   </section>
 -->
   <script type="text/javascript" src="js/slick.min.js"></script>
@@ -171,45 +187,16 @@
     });
   </script>
   <script>
-      $(function () { // wait for document ready
-          // init
-          var controller = new ScrollMagic.Controller({
-              globalSceneOptions: {
-                  triggerHook: 'onEnter'
-              }
-          });
-
-          // get all slides
-          var slides = document.querySelectorAll("section.section");
-
-          // create scene for every slide
-          for (var i=0; i<slides.length; i++) {
-              new ScrollMagic.Scene({
-                      triggerElement: slides[i]
-                  })
-                  .setPin(slides[i])
-                  .addIndicators() // add indicators (requires plugin)
-                  .addTo(controller);
-          }
-      });
-  </script>
-<!--
-  <script>
-    $(function(){
-        // Check the initial Poistion of the Sticky Header
-        var stickyHeaderTop = $('.main-nav').offset().top;
- 
-        $(window).scroll(function(){
-                if( $(window).scrollTop() > stickyHeaderTop ) {
-                        $('.main-nav').css({position: 'fixed', top: '0px', width: '720'});
-                        $('#stickyalias').css('display', 'block');
-                } else {
-                        $('.main-nav').css({position: 'static', top: '0px', width: '720'});
-                        $('#stickyalias').css('display', 'none');
-                }
+    $(document).ready(function() {
+        $('#pagepiling').pagepiling({
+            menu: '#menu',
+	    	anchors: ['page1', 'page2', 'page3', 'page4'],
+            verticalCentered: false,
+            css3: false,
+            easing: 'linear',
+            loopBottom: true
         });
-  });
+    });
   </script>
--->
 </body>
 </html>
