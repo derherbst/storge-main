@@ -1,58 +1,36 @@
 .cast {
   display: grid;
-    grid-template-columns: 1fr;
-    height: inherit;
-    align-content: center;
-}
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+    ". to-right";
+  height: inherit;
+  -ms-flex-line-pack: center;
+      align-content: center; }
 
 .cast__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    ". one four ."
-    ". two five ."
-    ". three six .";
+  align-self: center;
+  display: flex;
+  grid-area: to-right;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
-.cast__block {
-  justify-self: center;
-  text-align: center;
-  align-self: center;
+.cast__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
 }
 
 .cast__role {
   font-weight: 700;
   font-size: 16px;
   margin-bottom: 0.2em;
-  text-transform: none;
-}
+  margin-right: 1%;
+  text-transform: none; }
 
 .cast__name {
-  color: $white;
-  margin-bottom: 1em
-}
-
-.cast__block--actors {
-  grid-area: one;
-}
-
-.cast__block--director {
-  grid-area: two;
-}
-
-.cast__block--assistant {
-  grid-area: three;
-}
-
-.cast__block--photo {
-  grid-area: four;
-}
-
-.cast__block--production {
-  grid-area: five;
-}
-
-.cast__block--produced {
-  grid-area: six;
-}
+  color: #fff;
+  margin-bottom: 1em; }
