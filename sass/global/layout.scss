@@ -1,21 +1,14 @@
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
-@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
-@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700');
-@import url('https://fonts.googleapis.com/css?family=Stoke');
-@import url('https://fonts.googleapis.com/css?family=Corben');
-@import url('https://fonts.googleapis.com/css?family=Italiana');
-@import url('https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica');
-@import url('https://fonts.googleapis.com/css?family=Cutive+Mono');
-@import url('https://fonts.googleapis.com/css?family=Nixie+One');
-@import url('https://fonts.googleapis.com/css?family=Viga');
-@import url('https://fonts.googleapis.com/css?family=Forum');
-@import url('https://fonts.googleapis.com/css?family=Cinzel');
-@import url('https://fonts.googleapis.com/css?family=Overlock+SC');
-@import url('https://fonts.googleapis.com/css?family=Buda:300');
-@import url('https://fonts.googleapis.com/css?family=Quicksand');
-@import url('https://fonts.googleapis.com/css?family=Exo+2:400,700');
-@import url('https://fonts.googleapis.com/css?family=Bellefair');
 @import url('https://fonts.googleapis.com/css?family=Tenor+Sans');
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Abel');
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+@import url('https://fonts.googleapis.com/css?family=Libre+Franklin:400,700');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:400,700');
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700');
+@import url('https://fonts.googleapis.com/css?family=Proza+Libre:400,700');
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC');
+@import url('https://fonts.googleapis.com/css?family=Gafata');
 
 html {
   font-size: 16px;
@@ -28,24 +21,17 @@ body {
   padding: 0px;
   min-width: 320px;
   margin: 0 auto;
-//  font-family: "Nunito Sans", "Arial", sans-serif;
-//  font-family: 'Slabo 27px', serif;
-  font-family: 'Open Sans Condensed', sans-serif;
-//  font-family: 'Stoke', serif;
-//  font-family: 'Corben', cursive;
-//  font-family: 'Italiana', serif;
-//  font-family: 'IM Fell DW Pica', serif;
-//  font-family: 'Cutive Mono', monospace;
-//  font-family: 'Nixie One', cursive;
-//  font-family: 'Viga', sans-serif;
-//  font-family: 'Forum', cursive;
-//  font-family: 'Cinzel', serif;
-//  font-family: 'Overlock SC', cursive;
-//  font-family: 'Buda', cursive;
-//  font-family: 'Quicksand', sans-serif;
-//  font-family: 'Exo 2', sans-serif;
-//  font-family: 'Bellefair', serif;
 //  font-family: 'Tenor Sans', sans-serif;
+//  font-family: 'Dosis', sans-serif;
+//  font-family: 'Abel', sans-serif;
+//  font-family: 'Questrial', sans-serif;
+//  font-family: 'Libre Franklin', sans-serif;
+//  font-family: 'Alegreya Sans', sans-serif;
+//  font-family: 'Comfortaa', cursive;
+  font-family: 'Quattrocento Sans', sans-serif; //!! //
+  font-family: 'Proza Libre', sans-serif;  // !!//
+  font-family: 'Alegreya Sans SC', sans-serif; //!! //
+  font-family: 'Gafata', sans-serif;
   background-color: $black;
   color: $lightPink;
   text-transform: uppercase;

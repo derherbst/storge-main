@@ -16,7 +16,7 @@
       <div class="page-header__inner">
         <div class="page-header__intro">
           <h1 class="page-header__title">STORGE</h1>
-          <p class="page-header__caption">28 min &#9679; drama</p>
+          <p class="page-header__caption">29 min &#9679; drama</p>
         </div>
         <nav class="main-nav">
           <ul class="main-nav__list">
@@ -45,7 +45,7 @@
   <section id="trailer" class="section section--trailer">
     <div class="trailer">
       <div class="trailer__inner">
-        <iframe src="https://player.vimeo.com/video/220052464?color=efd5e5&title=0&byline=0&portrait=0" width="1100" height="579" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/220052464?color=efd5e5&title=0&byline=0&portrait=0" width="960" height="579" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -77,36 +77,47 @@
     <div class="cast">
       <div class="cast__inner">
         <div class="cast__block cast__block--actors">
-          <p class="cast__role">Alyona</p>
+          <p class="cast__role">Cast</p>
           <p class="cast__name">Alyona Alyonkina</p>
-          <p class="cast__role">Mother</p>
           <p class="cast__name">Galya Lebedinets</p>
         </div>
-        <div class="cast__block cast__block--director">
-          <p class="cast__role">Written and Directed by</p>
-          <p class="cast__name">Ekaterina Selenkina</p>
-        </div>
-        <div class="cast__block cast__block--assistant">
-          <p class="cast__role">Assistant Director</p>
-          <p class="cast__name">Anna Proshutinskaya</p>
-          <p class="cast__role">2nd Assistant Director</p>
-          <p class="cast__name">Aysel Latifova</p>
-        </div>
-        <div class="cast__block cast__block--photo">
-          <p class="cast__role">Director of Photography</p>
-          <p class="cast__name">Alexey Kurbatov</p>
-          <p class="cast__role">1st Assistant Camera</p>
-          <p class="cast__name">Yakov Mironchev</p>
-        </div>
-        <div class="cast__block cast__block--production">
-          <p class="cast__role">Production Designer</p>
-          <p class="cast__name">Darya Litvinova</p>
-          <p class="cast__role">Costumes</p>
-          <p class="cast__name">Polina Zhuravkova</p>
-          <p class="cast__role">Sound Recordist/Sound Editor</p>
-          <p class="cast__name">Konstantin Andzhanovskiy</p>
-          <p class="cast__role">Editor</p>
-          <p class="cast__name">Alexander Pavlov</p>
+        <div class="cast__block cast__block--crew">
+          <div class="cast__wrapper">
+            <p class="cast__role">Written and Directed by</p>
+            <p class="cast__name">Ekaterina Selenkina</p>
+          </div>
+          <div class="cast__wrapper">
+            <p class="cast__role">Assistant Director</p>
+            <p class="cast__name">Anna Proshutinskaya</p>
+          </div>
+          <div class="cast__wrapper">
+            <p class="cast__role">2nd Assistant Director</p>
+            <p class="cast__name">Aysel Latifova</p>
+          </div>
+          <div class="cast__wrapper">
+            <p class="cast__role">Director of Photography</p>
+            <p class="cast__name">Alexey Kurbatov</p>
+          </div>
+          <div class="cast__wrapper">
+            <p class="cast__role">1st Assistant Camera</p>
+            <p class="cast__name">Yakov Mironchev</p>
+          </div>
+          <div class="cast__wrapper">
+            <p class="cast__role">Production Designer</p>
+            <p class="cast__name">Darya Litvinova</p>
+          </div>
+          <div class="cast__wrapper">
+            <p class="cast__role">Costumes</p>
+            <p class="cast__name">Polina Zhuravkova</p>
+          </div>
+          <div class="cast__wrapper">
+            <p class="cast__role">Sound Recordist/Sound Editor</p>
+            <p class="cast__name">Konstantin Andzhanovskiy</p>
+          </div>
+          <div class="cast__wrapper">
+            <p class="cast__role">Editor</p>
+            <p class="cast__name">Alexander Pavlov</p>
+          </div>
         </div>
         <div class="cast__block cast__block--produced">
           <p class="cast__role">Produced by</p>
@@ -175,7 +186,7 @@
           // init
           var controller = new ScrollMagic.Controller({
               globalSceneOptions: {
-                  triggerHook: 'onEnter'
+                  triggerHook: 'onLeave'
               }
           });
 

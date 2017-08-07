@@ -1,24 +1,38 @@
 .cast {
-  display: grid;
-    grid-template-columns: 1fr;
-    height: inherit;
-    align-content: center;
+  display: flex;
+  flex-direction: reverse;
+  flex-wrap: nowrap;
+//  flex-basis: 50%;
+  height: inherit;
+  width: 100%;
+  justify-content: center;
 }
 
 .cast__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas:
-    ". one four ."
-    ". two five ."
-    ". three six .";
+  flex-basis: 29%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-self: center;
+  height: inherit;
+  align-content: space-around;
+  margin-left: 33%;
 }
 
 .cast__block {
-  justify-self: center;
-  text-align: center;
-  align-self: center;
+  &--actors {
+    padding-top: 15%;
+  }
+  &--produced {
+    padding-bottom: 15%;
+  }
+}
+
+.cast__wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
 }
 
 .cast__role {
@@ -26,33 +40,35 @@
   font-size: 16px;
   margin-bottom: 0.2em;
   text-transform: none;
+  flex: 0 1 auto;
 }
 
 .cast__name {
   color: $white;
-  margin-bottom: 1em
+  margin-bottom: 1em;
+  flex: 1 0 auto;
 }
 
-.cast__block--actors {
-  grid-area: one;
-}
-
-.cast__block--director {
-  grid-area: two;
-}
-
-.cast__block--assistant {
-  grid-area: three;
-}
-
-.cast__block--photo {
-  grid-area: four;
-}
-
-.cast__block--production {
-  grid-area: five;
-}
-
-.cast__block--produced {
-  grid-area: six;
-}
+//.cast__block--actors {
+//  grid-area: one;
+//}
+//
+//.cast__block--director {
+//  grid-area: two;
+//}
+//
+//.cast__block--assistant {
+//  grid-area: three;
+//}
+//
+//.cast__block--photo {
+//  grid-area: four;
+//}
+//
+//.cast__block--production {
+//  grid-area: five;
+//}
+//
+//.cast__block--produced {
+//  grid-area: six;
+//}

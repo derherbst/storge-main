@@ -7,24 +7,17 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Nunito+Sans");
-@import url("https://fonts.googleapis.com/css?family=Slabo+27px");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700");
-@import url("https://fonts.googleapis.com/css?family=Stoke");
-@import url("https://fonts.googleapis.com/css?family=Corben");
-@import url("https://fonts.googleapis.com/css?family=Italiana");
-@import url("https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica");
-@import url("https://fonts.googleapis.com/css?family=Cutive+Mono");
-@import url("https://fonts.googleapis.com/css?family=Nixie+One");
-@import url("https://fonts.googleapis.com/css?family=Viga");
-@import url("https://fonts.googleapis.com/css?family=Forum");
-@import url("https://fonts.googleapis.com/css?family=Cinzel");
-@import url("https://fonts.googleapis.com/css?family=Overlock+SC");
-@import url("https://fonts.googleapis.com/css?family=Buda:300");
-@import url("https://fonts.googleapis.com/css?family=Quicksand");
-@import url("https://fonts.googleapis.com/css?family=Exo+2:400,700");
-@import url("https://fonts.googleapis.com/css?family=Bellefair");
 @import url("https://fonts.googleapis.com/css?family=Tenor+Sans");
+@import url("https://fonts.googleapis.com/css?family=Dosis:400,600,700");
+@import url("https://fonts.googleapis.com/css?family=Abel");
+@import url("https://fonts.googleapis.com/css?family=Questrial");
+@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:400,700");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700");
+@import url("https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700");
+@import url("https://fonts.googleapis.com/css?family=Proza+Libre:400,700");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC");
+@import url("https://fonts.googleapis.com/css?family=Gafata");
 html {
   line-height: 1.15;
   /* 1 */
@@ -620,9 +613,12 @@ body {
   padding: 0px;
   min-width: 320px;
   margin: 0 auto;
-  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: 'Proza Libre', sans-serif;
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-family: 'Gafata', sans-serif;
   background-color: #000;
-  color: #fb8c9a;
+  color: #c5bdb7;
   text-transform: uppercase; }
 
 h1,
@@ -670,7 +666,7 @@ nav {
   position: relative;
   background-color: #000; }
   .section--home {
-    background: url("../img/storge-bg.jpg") center center no-repeat #000;
+    background: url("../img/storge-bg-2.jpg") center center no-repeat #000;
     background-size: cover; }
   .section--trailer, .section--photos {
     display: -webkit-box;
@@ -790,49 +786,77 @@ nav {
   -ms-flex-item-align: center;
       align-self: center; }
 
+.photos__inner {
+  width: 960px;
+  margin: 0 auto; }
+
 .cast {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: reverse;
+          flex-direction: reverse;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   height: inherit;
-  -ms-flex-line-pack: center;
-      align-content: center; }
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .cast__inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-areas: ". one four ." ". two five ." ". three six ."; }
-
-.cast__block {
-  justify-self: center;
-  text-align: center;
+  -ms-flex-preferred-size: 29%;
+      flex-basis: 29%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -ms-flex-item-align: center;
-      align-self: center; }
+      align-self: center;
+  height: inherit;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  margin-left: 33%; }
+
+.cast__block--actors {
+  padding-top: 15%; }
+
+.cast__block--produced {
+  padding-bottom: 15%; }
+
+.cast__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
 
 .cast__role {
   font-weight: 700;
   font-size: 16px;
   margin-bottom: 0.2em;
-  text-transform: none; }
+  text-transform: none;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto; }
 
 .cast__name {
   color: #fff;
-  margin-bottom: 1em; }
-
-.cast__block--actors {
-  grid-area: one; }
-
-.cast__block--director {
-  grid-area: two; }
-
-.cast__block--assistant {
-  grid-area: three; }
-
-.cast__block--photo {
-  grid-area: four; }
-
-.cast__block--production {
-  grid-area: five; }
-
-.cast__block--produced {
-  grid-area: six; }
+  margin-bottom: 1em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto; }
