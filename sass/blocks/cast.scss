@@ -1,25 +1,24 @@
 .cast {
-  display: flex;
-  flex-direction: reverse;
-  flex-wrap: nowrap;
-//  flex-basis: 50%;
-  height: inherit;
-  width: 100%;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: '. flex';
 }
 
 .cast__inner {
+  grid-area: flex;
   flex-basis: 29%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   align-self: center;
-  height: inherit;
+  height: 100vh;
+  width: 419px;
   align-content: space-around;
-  margin-left: 33%;
 }
 
 .cast__block {
+  height: auto;
   &--actors {
     padding-top: 15%;
   }
