@@ -6,6 +6,7 @@ var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var imagemin = require('gulp-imagemin');
 
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
@@ -31,4 +32,10 @@ gulp.task("serve", ["style"], function() {
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("*.html").on("change", server.reload);
+});
+
+gulp.task('image', function() {
+    gulp.src('img/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('img'))
 });

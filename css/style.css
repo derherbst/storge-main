@@ -7,17 +7,8 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Tenor+Sans");
-@import url("https://fonts.googleapis.com/css?family=Dosis:400,600,700");
-@import url("https://fonts.googleapis.com/css?family=Abel");
-@import url("https://fonts.googleapis.com/css?family=Questrial");
-@import url("https://fonts.googleapis.com/css?family=Libre+Franklin:400,700");
-@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,700");
-@import url("https://fonts.googleapis.com/css?family=Comfortaa:400,700");
 @import url("https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,700");
-@import url("https://fonts.googleapis.com/css?family=Proza+Libre:400,700");
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC");
-@import url("https://fonts.googleapis.com/css?family=Gafata");
 html {
   line-height: 1.15;
   /* 1 */
@@ -509,7 +500,6 @@ template {
   .slick-next:hover,
   .slick-next:focus {
     outline: none;
-    background: transparent;
     color: transparent; }
     .slick-prev:hover:before, .slick-prev:focus:before,
     .slick-next:hover:before,
@@ -529,24 +519,22 @@ template {
     -moz-osx-font-smoothing: grayscale; }
 
 .slick-prev {
-  left: -25px; }
+  left: -41px;
+  background: url(../img/left.png) center no-repeat;
+  background-size: 100%; }
   [dir="rtl"] .slick-prev {
     left: auto;
-    right: -25px; }
-  .slick-prev:before {
-    content: "←"; }
-    [dir="rtl"] .slick-prev:before {
-      content: "→"; }
+    right: -25px;
+    background: url(../img/left.png) center no-repeat;
+    background-size: 100%; }
 
 .slick-next {
-  right: -25px; }
+  right: -41px;
+  background: url(../img/right.png) center no-repeat;
+  background-size: 100%; }
   [dir="rtl"] .slick-next {
     left: -25px;
     right: auto; }
-  .slick-next:before {
-    content: "→"; }
-    [dir="rtl"] .slick-next:before {
-      content: "←"; }
 
 /* Dots */
 .slick-dotted.slick-slider {
@@ -614,9 +602,7 @@ body {
   min-width: 320px;
   margin: 0 auto;
   font-family: 'Quattrocento Sans', sans-serif;
-  font-family: 'Proza Libre', sans-serif;
   font-family: 'Alegreya Sans SC', sans-serif;
-  font-family: 'Gafata', sans-serif;
   background-color: #000;
   color: #c5bdb7;
   text-transform: uppercase; }
@@ -746,6 +732,8 @@ nav {
   display: block;
   text-decoration: none;
   color: inherit; }
+  .main-nav__link span {
+    font-family: 'Quattrocento Sans', sans-serif; }
   .main-nav__link:hover, .main-nav__link.active {
     color: #fff; }
 
@@ -791,22 +779,13 @@ nav {
   margin: 0 auto; }
 
 .cast {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: reverse;
-          flex-direction: reverse;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  height: inherit;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center; }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: '. flex'; }
 
 .cast__inner {
+  grid-area: flex;
   -ms-flex-preferred-size: 29%;
       flex-basis: 29%;
   display: -webkit-box;
@@ -820,16 +799,18 @@ nav {
       flex-wrap: wrap;
   -ms-flex-item-align: center;
       align-self: center;
-  height: inherit;
+  height: 100vh;
+  width: 419px;
   -ms-flex-line-pack: distribute;
       align-content: space-around;
-  margin-left: 33%; }
+  margin-left: 5%; }
 
-.cast__block--actors {
-  padding-top: 15%; }
-
-.cast__block--produced {
-  padding-bottom: 15%; }
+.cast__block {
+  height: auto; }
+  .cast__block--actors {
+    padding-top: 15%; }
+  .cast__block--produced {
+    padding-bottom: 15%; }
 
 .cast__wrapper {
   display: -webkit-box;
@@ -848,7 +829,8 @@ nav {
 .cast__role {
   font-weight: 700;
   font-size: 16px;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.7em;
+  margin-right: .5em;
   text-transform: none;
   -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
@@ -860,3 +842,30 @@ nav {
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto; }
+
+.posters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100vh; }
+
+.posters__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
+
+.posters__image-wrapper {
+  margin-right: 20px; }

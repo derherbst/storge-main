@@ -31,13 +31,11 @@
               <a class="main-nav__link" href="#photos">photos</a>
             </li>
             <li class="main-nav__item">
-              <a class="main-nav__link" href="#cast">cast&amp;crew</a>
+              <a class="main-nav__link" href="#cast">cast<span>&amp;</span>crew</a>
             </li>
-<!--
             <li class="main-nav__item">
               <a class="main-nav__link" href="#posters">posters</a>
             </li>
--->
           </ul>
         </nav>
       </div>
@@ -46,7 +44,7 @@
   <section id="trailer" class="section section--trailer">
     <div class="trailer">
       <div class="trailer__inner">
-        <iframe src="https://player.vimeo.com/video/220052464?color=efd5e5&title=0&byline=0&portrait=0" width="960" height="579" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe src="https://player.vimeo.com/video/220052464?color=c5bdb7&title=0&byline=0&portrait=0" width="960" height="506" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -112,7 +110,7 @@
             <p class="cast__name">Polina Zhuravkova</p>
           </div>
           <div class="cast__wrapper">
-            <p class="cast__role">Sound Recordist/Sound Editor</p>
+            <p class="cast__role">Sound</p>
             <p class="cast__name">Konstantin Andzhanovskiy</p>
           </div>
           <div class="cast__wrapper">
@@ -128,17 +126,18 @@
       </div>
     </div>
   </section>
-<!--
   <section id="posters" class="section section--posters">
-    <nav class="top"></nav>
     <div class="posters">
       <div class="posters__inner">
-        
+        <div class="posters__image-wrapper">
+          <img class="posters__img" src="img/poster-1.jpg" width="400">
+        </div>
+        <div class="posters__image-wrapper">
+          <img class="posters__img" src="img/poster-2.jpg" width="400">
+        </div>
       </div>
     </div>
-    <nav class="down"></nav>
   </section>
--->
   <script type="text/javascript" src="js/slick.min.js"></script>
   <script type="text/javascript" src="js/init-slick.js"></script>
   <script>
@@ -182,28 +181,10 @@
 
     });
   </script>
-  <script>
-      $(function () { // wait for document ready
-          // init
-          var controller = new ScrollMagic.Controller({
-              globalSceneOptions: {
-                  triggerHook: 'onLeave'
-              }
-          });
-
-          // get all slides
-          var slides = document.querySelectorAll("section.section");
-
-          // create scene for every slide
-          for (var i=0; i<slides.length; i++) {
-              new ScrollMagic.Scene({
-                      triggerElement: slides[i]
-                  })
-                  .setPin(slides[i])
-                  .addIndicators() // add indicators (requires plugin)
-                  .addTo(controller);
-          }
-      });
+  <script type="text/javascript">
+  {
+  if (screen.width > 780) document.write ('<script type="text/javascript" src="js/ScrollMagic-init.js" ></sc' + 'ript>');
+  }
   </script>
 <!--
   <script>

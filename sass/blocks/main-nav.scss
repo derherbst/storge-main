@@ -19,7 +19,9 @@
   display: block;
   text-decoration: none;
   color: inherit;
-  
+  span {
+    font-family: 'Quattrocento Sans', sans-serif;
+  }
   &:hover,
   &.active {
     color: $white;

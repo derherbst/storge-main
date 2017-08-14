@@ -15,6 +15,7 @@
   height: 100vh;
   width: 419px;
   align-content: space-around;
+  margin-left: 5%;
 }
 
 .cast__block {
@@ -37,7 +38,8 @@
 .cast__role {
   font-weight: 700;
   font-size: 16px;
-  margin-bottom: 0.2em;
+  margin-bottom: 0.7em;
+  margin-right: .5em;
   text-transform: none;
   flex: 0 1 auto;
 }
